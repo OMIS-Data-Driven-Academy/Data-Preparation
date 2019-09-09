@@ -146,3 +146,58 @@
 
 
 }
+{ Adressen Stadt Zürich
+
+  Adressen-Stadt-Zuerich\adressen.csv
+
+  { Prepare Oracle schema
+
+    Adressen-Stadt-Zuerich\prepare-Oracle-Schema\create-user.sql
+    Adressen-Stadt-Zuerich\prepare-Oracle-Schema\create-schema.sql
+    Adressen-Stadt-Zuerich\prepare-Oracle-Schema\import-data.bat
+
+  }
+  { Get glipse of data
+
+    Adressen-Stadt-Zuerich\get-glimpse-of-data.sql
+
+  }
+  { select count / distinct / nulls etc 
+
+     Adressen-Stadt-Zuerich\select-count-distinct-nulls-ONE-column.sql
+     Adressen-Stadt-Zuerich\select-count-distinct-nulls-ALL-columns.sql
+
+     Adressen-Stadt-Zuerich\gather-statistics.sql
+     Adressen-Stadt-Zuerich\select-dba_tab_columns.sql
+
+  }
+  { Schulkreis, ein alter bekannter
+
+     Adressen-Stadt-Zuerich\schulkreis.sql
+
+  }
+  { Doppelte Adressen
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\lokalisationsname-hausnummer_adressse.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\doppelte-adressen.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\analytic.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\gwr_egid.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\two-analytic-functions.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\distance.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\plot_leutschenbachstrasse_38.R
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\view.sql
+
+     Adressen-Stadt-Zuerich\doppelte-Adressen\plot.R
+
+  }
+   
+
+
+}
