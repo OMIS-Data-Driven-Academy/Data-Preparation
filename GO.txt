@@ -1,0 +1,148 @@
+
+{ Kitas Stadt Zürich
+
+  { CSV file: Kitas pro Schulkreis
+
+    
+   ' Beachte die Leerzeile am Ende des CSVs:
+
+     Kitas-Stadt-Zuerich\sd_zv_kitas_schulkreis.csv
+
+    ' Bedeutung der Spalten:
+
+      Skname           : Schulkreis name
+      Anz_BP_SK        : Betreuungsplätze
+      Anz_Kinder_VA    : Kinder im Vorschulalter
+      Belegungsfaktor  : Durchschnittlichee Anzahl Kinder pro Betreuuungsplatz
+      Versorgungsquote : Anzahl Vorschulkinder im Verhältnis zum Total der kita-Plätze unter Berücksichtigung des Belegungsfaktors ( = anz_bp_sk / anz_kinder_va * belegungsfaktor)
+
+
+  }
+  { Datenbank und Tabelle erstellen
+
+    Kitas-Stadt-Zuerich\create-db.sql
+
+    Kitas-Stadt-Zuerich\show-tables.sql
+
+    Kitas-Stadt-Zuerich\create-table-sd_zv_kitas_schulkreis.sql
+
+    Kitas-Stadt-Zuerich\import-table-sd_zv_kitas_schulkreis.sql
+
+    Kitas-Stadt-Zuerich\select-from-table-sd_zv_kitas_schulkreis.sql
+
+    truncate table sd_zv_kitas_schulkreis;
+
+    Kitas-Stadt-Zuerich\import-table-sd_zv_kitas_schulkreis_65001.sql
+
+    Kitas-Stadt-Zuerich\select-from-table-sd_zv_kitas_schulkreis.sql
+
+  }
+  { Datenverständnids
+
+    Kitas-Stadt-Zuerich\select-from-table-sd_zv_kitas_schulkreis.sql
+
+    { Verstehen Versorgungsquote
+
+      Kitas-Stadt-Zuerich\verstehen-versorgungsquote-0.sql
+
+      Kitas-Stadt-Zuerich\verstehen-versorgungsquote-1.sql
+
+      Kitas-Stadt-Zuerich\verstehen-versorgungsquote-round-4.sql
+
+    ' Problem: versorgungsquote is not always rounded to 4 decimal places!
+
+      Kitas-Stadt-Zuerich\verstehen-versorgungsquote-round-dynamic.sql
+
+
+    }
+
+  }
+  { Jahr min max
+
+    Kitas-Stadt-Zuerich\jahr-min-max.sql
+    Kitas-Stadt-Zuerich\jahr-min-max_berechne_anz_jahre.sql
+    Kitas-Stadt-Zuerich\jahr-min-max_alle_jahre.sql
+    Kitas-Stadt-Zuerich\jahr-ampelbericht.sql
+
+  }
+  { Stadtkreise
+
+      Kitas-Stadt-Zuerich\Stadtkreise-count.sql
+      Kitas-Stadt-Zuerich\Stadtkreise-oha.sql
+      Kitas-Stadt-Zuerich\Stadtkreise-oha-reduktion-records.sql
+      Kitas-Stadt-Zuerich\Stadtkreise-Name-der-Anomalien.sql
+      Kitas-Stadt-Zuerich\Stadtkreise-Ampelbericht.sql
+      Kitas-Stadt-Zuerich\Fix-Zueriberg.sql
+
+  }
+  { Get data into R
+
+      Kitas-Stadt-Zuerich\get-data-into-R_encoding.R
+
+  }
+  { Exkurs Datentypen
+  
+    digression-datatypes\latin-1_vs-utf8.R
+
+    digression-datatypes\data_type_test-create.sql
+    digression-datatypes\data_type_test-insert.sql
+    digression-datatypes\data_type_test-properties.sql
+
+    digression-datatypes\data_type_test-create-croatian.sql
+    digression-datatypes\data_type_test-insert.sql
+
+    digression-datatypes\one-datatype-only.sql
+
+    
+    cast   : interpret same underlying bytes as different type
+    convert: interpret first and create different underlying bytes
+
+  }
+  { R Plots
+
+    Kitas-Stadt-Zuerich\plot-jahr_bp.R
+    Kitas-Stadt-Zuerich\plot-jahr_alle-SK.R
+
+  }
+  { Outliers mit SQL finden
+
+     Kitas-Stadt-Zuerich\capture-outlier-create-view.sql
+
+     Kitas-Stadt-Zuerich\capture-outlier-create-view_increase.sql
+
+     Kitas-Stadt-Zuerich\capture-outlier-select.sql
+
+  }
+  { Normalisieren
+
+
+      Kitas-Stadt-Zuerich\Normalisieren\select.sql
+      Kitas-Stadt-Zuerich\Normalisieren\select-distinct.sql
+      Kitas-Stadt-Zuerich\Normalisieren\select-count-dsitinct-per-year.sql
+
+      Kitas-Stadt-Zuerich\Normalisieren\create-table-kita-jahr.sql
+      Kitas-Stadt-Zuerich\Normalisieren\create-table-kita-jahr_best-practise.sql
+
+      Kitas-Stadt-Zuerich\Normalisieren\create-table-kita-schulkreis.sql
+      Kitas-Stadt-Zuerich\Normalisieren\create-table-kita-schulkreis-daten.sql
+
+      Kitas-Stadt-Zuerich\Normalisieren\rekonstruktion.sql
+
+  }
+  { Pivot
+
+    Kitas-Stadt-Zuerich\Pivot\With-pivot-operator.sql
+    Kitas-Stadt-Zuerich\Pivot\traditional.sql
+    Kitas-Stadt-Zuerich\Pivot\are-figures-correctly-calculated.sql
+    Kitas-Stadt-Zuerich\Pivot\sum_va.sql
+     
+
+  }
+  { Data types
+
+    Kitas-Stadt-Zuerich\change-datatype.sql
+
+  }
+
+
+}
