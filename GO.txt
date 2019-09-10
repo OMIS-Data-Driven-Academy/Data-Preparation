@@ -197,7 +197,52 @@
      Adressen-Stadt-Zuerich\doppelte-Adressen\plot.R
 
   }
+  { Normalisieren
+
+      Adressen-Stadt-Zuerich\normalisieren\validate_conversion.sql
+      Adressen-Stadt-Zuerich\normalisieren\hausnummern_numeric.sql
+
+      Adressen-Stadt-Zuerich\normalisieren\is-addresse-redundant.sql
+      Adressen-Stadt-Zuerich\normalisieren\count-stadtkreis.sql
+      Adressen-Stadt-Zuerich\normalisieren\verify-1-to-n_between-stadtkreis-and-statistisches_quartier.sql
+      Adressen-Stadt-Zuerich\normalisieren\verify-1-to-n_between-stadtkreis-and-verwaltungsquartier.sql
+      Adressen-Stadt-Zuerich\normalisieren\assess-relationship-between-verwaltungsquartier-and-statistisches_quartier.sql
+
+      Adressen-Stadt-Zuerich\normalisieren\show-stadtkreis-11.R
+
+      Adressen-Stadt-Zuerich\normalisieren\schulkreis.sql
+
+      Adressen-Stadt-Zuerich\normalisieren\statistische_zonen.sql
+
+      Adressen-Stadt-Zuerich\normalisieren\plz.sql
+
+      Adressen-Stadt-Zuerich\normalisieren\lokalisatinsname.sql
+      Adressen-Stadt-Zuerich\normalisieren\lokalisationsname-plot.R
+
+      Adressen-Stadt-Zuerich\normalisieren\normalisieren.sql
+
+  }
    
 
+
+}
+{ Adressen Kanton Zürich
+
+  { Prepare database etc.
+
+    Adressen-Kanton-Zuerich\prepare-MySQL-Database\create-db.sql
+    Adressen-Kanton-Zuerich\prepare-MySQL-Database\create-tables.sql
+    Adressen-Kanton-Zuerich\prepare-MySQL-Database\create-tables.sql
+
+  }
+  { Längste Strasse
+
+    Adressen-Kanton-Zuerich\laengste_strasse.sql
+
+  }
+  { The strange case of the missing number 13
+
+
+  }
 
 }
