@@ -13,7 +13,7 @@ select * from (
 where
    cnt_schulkreis > 1;
 --
--- The result suggests a 1:n relationship between schulkreis to stadtkreis.
+-- The result suggests a 1:n relationship between stadtkreis to schulkreis.
 --
 
 select * from (

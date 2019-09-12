@@ -31,6 +31,7 @@ from
 where 
    round(anz_bp_sk / anz_kinder_va * belegungsfaktor, 4) <> versorgungsquote;
 
+-- TODO: len
 
 select
    jahr,

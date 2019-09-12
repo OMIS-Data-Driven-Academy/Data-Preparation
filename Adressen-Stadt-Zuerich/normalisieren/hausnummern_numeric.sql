@@ -23,7 +23,7 @@ from
 where
    rn_addr = 1;
 
-select *
+select * -- 59a-A = Projektiert
 from
    stzh_adresse_import_cnt
 where

@@ -28,10 +28,8 @@ coord_verification <- data.frame (
 #  lat = c(lon_upper_left),
 #  lon = c(lat_upper_left)
 );
-
   coordinates(coord_verification) <- ~lon+lat;
 # coordinates(coord_verification) <- ~lat+lon
-
 proj4string(coord_verification) <- CRS("+init=epsg:4326")
 points(spTransform(coord_verification,osm()), col='blue', pch=19, cex=5)
 
@@ -67,5 +65,4 @@ map_stamen_watercolor <- openmap(
                type = 'stamen-watercolor'
 );
 plot(map_stamen_watercolor );
-
 points(spTransform(coords, osm()), col='#e98332', pch=19, cex=5);
