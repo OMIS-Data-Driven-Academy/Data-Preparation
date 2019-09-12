@@ -1,4 +1,4 @@
-create or replace view stzh_adresse_import_cnt as
+create or replace view st_zh.stzh_adresse_import_cnt as
 select
    s.*,
    count     (*) over (partition by adresse                       ) cnt_addr,
@@ -11,7 +11,7 @@ from
 select * from stzh_adresse_import_cnt where cnt_addr > 1;
 select * from stzh_adresse_import_cnt where cnt_addr > 1 and rn_addr = 1;
 
-create or replace view stzh_doppelte_adressen as
+create or replace view st_zh.stzh_doppelte_adressen as
 select
    cnt_1.adresse,
    --

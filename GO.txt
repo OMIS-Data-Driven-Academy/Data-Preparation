@@ -136,7 +136,6 @@
     Kitas-Stadt-Zuerich\Pivot\are-figures-correctly-calculated.sql
     Kitas-Stadt-Zuerich\Pivot\sum_va.sql
      
-
   }
   { Data types
 
@@ -157,7 +156,7 @@
     Adressen-Stadt-Zuerich\prepare-Oracle-Schema\import-data.bat
 
   }
-  { Get glipse of data
+  { Get glimpse of data
 
     Adressen-Stadt-Zuerich\get-glimpse-of-data.sql
 
@@ -222,9 +221,6 @@
       Adressen-Stadt-Zuerich\normalisieren\normalisieren.sql
 
   }
-   
-
-
 }
 { Adressen Kanton Zürich
 
@@ -241,6 +237,9 @@
 
   }
   { The strange case of the missing number 13
+
+    Adressen-Kanton-Zuerich\13\distribution.R
+    Adressen-Kanton-Zuerich\13\untersuchung.sql
 
 
   }
