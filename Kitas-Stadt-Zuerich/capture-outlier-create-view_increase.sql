@@ -1,4 +1,6 @@
 drop   view if exists sd_zv_kitas_schulkreis_gesamte_stadt_v;
+go
+
 create view sd_zv_kitas_schulkreis_gesamte_stadt_v as
 select
    jahr,
@@ -29,3 +31,4 @@ from
    sd_zv_kitas_schulkreis_gesamte_stadt_v
 order by
    jahr;
+go
